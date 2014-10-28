@@ -24,6 +24,7 @@ Category.create(name: "computers", user_id: 3)
 Category.create(name: "cyborgs", user_id: 3)
 Category.create(name: "happiness", user_id: 3)
 
+Comment.delete_all
 Comment.create(text: "bkldsjafkldjksla", category_id:1)
 Comment.create(text: "popopopopop", category_id:2)
 Comment.create(text: "fdsjaklfkjewlk", category_id:3)

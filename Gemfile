@@ -41,3 +41,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails'
 
 gem 'awesome_print', '~> 1.2.0'
+
+gem 'will_paginate', '~> 3.0'
+
+gem 'google-api-client'
