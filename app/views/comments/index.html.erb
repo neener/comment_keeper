@@ -4,4 +4,10 @@
 	<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
 	
 	<button>Submit</button>
+	<ul>
+	<% @comments.each do |comment|%>
+	<li><%= comment.text %></li>
+	<button>Add</button>
+	<% end %>
+	</ul>
 </form>

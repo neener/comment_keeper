@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
 def index
-	# comments = Comment.all()
+	@comments = Comment.all()
 	render :index
 end
 
@@ -12,7 +12,7 @@ def create
 		comment_text = comment_hash["content"]["$t"]
 		Comment.create(text: comment_text)
 	end
-	binding.pry
+	redirect_to '/comments'
 end
 
 def show
