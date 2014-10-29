@@ -9,7 +9,7 @@ class SessionController < ApplicationController
 
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
-			redirect_to '/users'
+			render :comments
 		else
 			redirect_to '/login'
 		end
