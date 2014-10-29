@@ -1,0 +1,11 @@
+<ul>
+<% categories.each do |category| %>
+<li><%= category.name %></li>
+<% end %>
+</ul>
+
+<form action="/categories/new" method="GET">
+	<input name="category" type="text">
+	</input>
+	<button>Add</button>
+</form>

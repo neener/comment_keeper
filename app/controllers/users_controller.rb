@@ -2,7 +2,8 @@ class UsersController < ApplicationController
 
  def index
  	users = User.all()
- 	render(:index)
+ 	categories = Category.all()
+ 	render(:index, {locals: {categories: categories}})
  end
 
  def create

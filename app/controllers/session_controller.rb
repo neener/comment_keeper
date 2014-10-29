@@ -1,7 +1,7 @@
 class SessionController < ApplicationController
 
 	def new
-		render :new
+		
 	end
 
 	def create
@@ -9,10 +9,9 @@ class SessionController < ApplicationController
 
 		if user && user.authenticate(params[:password])
 			session[:user_id] = user.id
-			redirect_to '/comments'
+			redirect_to '/users'
 		else
-			@error = true
-			render :new
+			redirect_to '/login'
 		end
 	end
 

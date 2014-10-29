@@ -4,8 +4,10 @@ class CategoriesController < ApplicationController
 		categories = Category.all()
 	end
 
-	def create
-		category = Category.create(name: params["name"])
+	def new
+		# binding.pry
+		category = Category.create(name: params["category"])
+		redirect_to '/users'
 	end
 
 	def show
