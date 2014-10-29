@@ -13,6 +13,7 @@
 				<p style='color: red;'>Incorrect email/password</p>
 			<% end %>
 			<div id="content">
+				<h3> Sign In: </h3>
 				<form action="/session" method="POST">
 					<label>
 						Email:
@@ -26,6 +27,20 @@
 					<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
 					<button>Sign In</button>
 				</form>
+				<h3> Sign up: </h3>
+					<form action="/session" method="POST">
+						<label>
+							Email:
+							<input name="email">
+						</label> <br/>
+						<label>
+							Password:
+							<input name="password" type="password">
+						</label><br/>
+
+						<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+						<button>Sign Up</button>
+					</form>
 			</div>
 		</div>
 	</body>

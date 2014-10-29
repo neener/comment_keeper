@@ -44,4 +44,8 @@ gem 'awesome_print', '~> 1.2.0'
 
 gem 'will_paginate', '~> 3.0'
 
-gem 'google-api-client'
+gem 'google-api-client', :git => 'git://github.com/google/google-api-ruby-client.git'
+
+gem 'freebase-api'
+
+gem 'httparty'
