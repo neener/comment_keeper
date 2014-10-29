@@ -6,7 +6,13 @@ def index
 end
 
 def create
-	comment = Comment.create(text: params["text"])
+	video_id = params[:video_id]
+	results = HTTParty.get("https://gdata.youtube.com/feeds/api/videos/#{video_id}/comments?max-results=50&alt=json&orderby=published")
+	results["feed"]["entry"].each do |comment_hash|
+		comment_text = comment_hash["content"]["$t"]
+		Comment.create(text: comment_text)
+	end
+	binding.pry
 end
 
 def show
