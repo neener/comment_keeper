@@ -1,9 +1,11 @@
-<%= form_tag("/comments", method: "get") do %>
-	<%= label_tag(:query, "Search Comments:") %>
-	<%= search_field(:query, :comments) %>
-	<%= submit_tag("Search") %>
-<% end %>
+ <%= form_tag("/comments", method: "get") do %>
+ 	<%= label_tag(:query, "Search Comments:") %>
+ 	<%= search_field(:query, :comments) %>
+ 	<%= submit_tag("Search") %>
+ <% end %>
 
-<% @comments.each do |comment| %>
-	<%= comment.text %>
-	<% end %>
+ <ul>
+ <% @comments.each do |comment| %>
+ 	<li><%= comment.text %></li>
+ <% end %>
+</ul>

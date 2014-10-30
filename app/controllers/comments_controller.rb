@@ -1,11 +1,15 @@
 class CommentsController < ApplicationController
 
 def index
-	if params[:query][:comments].present?
+	
+	if params[:query].present?
+		
 		@comments = Comment.where('text LIKE ?', "%#{params[:query][:comments]}%")
 	else
-		render :index
-	end
+		@comments = Comment.all
+		# render :index
+	# end
+end
 end
 
 def create

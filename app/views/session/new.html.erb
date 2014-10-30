@@ -17,7 +17,7 @@
 				<form action="/session" method="POST">
 					<label>
 						Email:
-						<input name="email">
+						<input name="email" type="text">
 					</label> <br/>
 					<label>
 						Password:
@@ -26,6 +26,21 @@
 
 					<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
 					<button>Sign In</button>
+				</form>
+
+				<h3> Sign Up: </h3>
+				<form action="/users" method="POST">
+					<label>
+						Email:
+						<input name="email" type="text">
+					</label> <br/>
+					<label>
+						Password:
+						<input name="password" type="password">
+					</label><br/>
+
+					<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+					<button>Sign Up</button>
 				</form>
 			</div>
 		</div>
