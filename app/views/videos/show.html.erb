@@ -1,0 +1,7 @@
+<%= link_to(@video.title, @video.youtube_url) %>
+
+ <ul>
+ <% @video.comments.each do |comment| %>
+ 	<li><%= comment.text %><%= link_to("view", comment) %></li>
+ <% end %>
+</ul>

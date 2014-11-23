@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029200947) do
+ActiveRecord::Schema.define(version: 20141122225008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20141029200947) do
     t.text    "text"
     t.integer "category_id"
     t.integer "video_id"
+    t.string  "youtube_comment_id"
   end
 
   create_table "users", force: true do |t|
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 20141029200947) do
     t.string   "youtube_video_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
 end

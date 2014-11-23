@@ -1,4 +1,4 @@
- <%= form_tag("/comments", method: "get") do %>
+ <%= form_tag("/search/comments", method: "get") do %>
  	<%= label_tag(:query, "Search Comments:") %>
  	<%= search_field(:query, :comments) %>
  	<%= submit_tag("Search") %>
@@ -6,6 +6,6 @@
 
  <ul>
  <% @comments.each do |comment| %>
- 	<li><%= comment.text %></li>
+ 	<li><%= comment.text %> <%= link_to("view", comment) %></li>
  <% end %>
 </ul>
